@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], 
+        input[type="number"], input[type="url"], input[type="date"],
+        input[type="password"], input[type="search"], input[type="time"],
+        input[type="month"], input[type="week"], input[type="datetime-local"],
+        select, textarea {
+            width: 250px;
+            padding: 5px;
+        }
+        .radio-group, .checkbox-group {
+            margin-left: 200px;
+        }
+        .radio-group label, .checkbox-group label {
+            width: auto;
+            margin-right: 15px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .iframe-container {
+            margin-top: 30px;
+        }
+        .color-preview {
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <select name="nationality" id="nationality" required>
+                    <option value="pakistan">Pakistani</option>
+                    <option value="indian">Indian</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Street Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your street address">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city">
+            </div>
+            <div class="form-group">
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state">
+            </div>
+            <div class="form-group">
+                <label for="zipCode">ZIP Code:</label>
+                <input type="text" id="zipCode" name="zipCode" placeholder="Enter ZIP code">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Educational Background</legend>
+            <div class="form-group">
+                <label for="highSchool">High School:</label>
+                <input type="text" id="highSchool" name="highSchool" placeholder="Enter your high school name">
+            </div>
+            <div class="form-group">
+                <label for="graduationYear">Graduation Year:</label>
+                <input type="number" id="graduationYear" name="graduationYear" placeholder="YYYY" min="1900" max="2030">
+            </div>
+            <div class="form-group">
+                <label>Education Level:</label>
+                <div class="radio-group">
+                    <input type="radio" id="highschool" name="educationLevel" value="highschool">
+                    <label for="highschool">High School</label>
+                    <input type="radio" id="bachelor" name="educationLevel" value="bachelor">
+                    <label for="bachelor">Bachelor's</label>
+                    <input type="radio" id="master" name="educationLevel" value="master">
+                    <label for="master">Master's</label>
+                    <input type="radio" id="phd" name="educationLevel" value="phd">
+                    <label for="phd">PhD</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="major">Major/Field of Study:</label>
+                <input type="text" id="major" name="major" placeholder="Enter your field of study">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Input Types</legend>
+            <div class="form-group">
+                <label for="birthtime">Birth Time:</label>
+                <input type="time" id="birthtime" name="birthtime">
+            </div>
+            <div class="form-group">
+                <label for="gradMonth">Graduation Month:</label>
+                <input type="month" id="gradMonth" name="gradMonth">
+            </div>
+            <div class="form-group">
+                <label for="weekReport">Weekly Report:</label>
+                <input type="week" id="weekReport" name="weekReport">
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Appointment:</label>
+                <input type="datetime-local" id="appointmentTime" name="appointmentTime">
+            </div>
+            <div class="form-group">
+                <label for="searchSkills">Search Skills:</label>
+                <input type="search" id="searchSkills" name="searchSkills" placeholder="Search your skills">
+            </div>
+            <div class="form-group">
+                <label for="favoriteColor">Favorite Color:</label>
+                <input type="color" id="favoriteColor" name="favoriteColor">
+                <span class="color-preview"></span>
+            </div>
+            <div class="form-group">
+                <label for="profilePic">Profile Picture:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="satisfaction">Satisfaction:</label>
+                <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" step="1">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests & Preferences</legend>
+            <div class="form-group">
+                <label>Interests:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="reading" name="interests" value="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="travel" name="interests" value="travel">
+                    <label for="travel">Travel</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Newsletter Subscription:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset Form">
+        </div>
+    </form>
+
+    <div class="iframe-container">
+        <h2>Our Location</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.4738893182624!2d67.03750547538592!3d24.8814584776785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eebb56aaaab%3A0x27ab04809ef5020a!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1682436876405!5m2!1sen!2s" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</body>
+</html>
