@@ -1,16 +1,13 @@
 var params = new URLSearchParams(window.location.search);
-var data = params.get("data")
+var data = params.get("data");
 
-if(data){
-  data = JSON.parse(data)
+if (data) {
+  data = JSON.parse(data);
 }
 
-console.log(data)
-
-
+console.log(data);
 
 var parent = document.getElementById("cardssection");
-
 
 for (var i = 0; i < data.length; i++) {
   var card = document.createElement("div");
