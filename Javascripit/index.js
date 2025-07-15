@@ -723,3 +723,92 @@
 //   h1.innerText =`Hello World ${i+1}`;
 //   heading.appendChild(h1);
 // }
+
+// ES6 PRACTICE
+// var user = "student 1"
+// var user = "student 2"
+// var user = "student 3"
+// user = "student 4"
+
+// let student  = "Developer"
+// student = "Developer 2"
+
+// function test(num1,num2){
+//     return num1+num2
+// }
+
+// const test = a =>a
+
+// console.log(test(50))
+
+// var arr1 = [1, 2, 3, 4];
+// var arr2 = [5, 6, 7, 8];
+// var arr3 = [9, 10];
+
+// var arr = [...arr2, ...arr1, ...arr3];
+// console.log(arr);
+
+// var obj1 = { name: "hello", lastname: "world" };
+// var obj2 = { mobileNum: "02342342234", age: 20, gender: "Male" };
+
+// var userInfo = {...obj1,...obj2}
+// console.log(userInfo)
+
+// var post1 = { name: "hello", lastname: "world", age: 20 };
+// let { name, lastname,age } = post1;
+
+// var post2 = {title:"hello",createdAt:"234"}
+// let {title} = post2
+// console.log(title);
+// post1.name
+// post1.title
+
+// var arr = ["one", "two", "three", "four"];
+// arr[10] = "hello";
+// arr[6] ="a"
+// console.log(arr.length);
+// console.log(arr);
+
+// // console.log(arr[10])
+
+// let [a, b, c, d, e, f] = arr;
+// console.log(f);
+
+// var data = ["a", "b", "c", "d", "e", "f"];
+
+// var arr = [];
+
+// var result = data.forEach((value, index) => {
+//   if (index > 3) {
+//     arr.push(value);
+//   }
+// });
+
+// console.log(result);
+
+// var data = [1,2,4,3];
+
+// for (const element of data) {
+//   console.log(element);
+// }
+
+// let list = ["a", 5, 6];
+
+// for (let i in list) {
+//    console.log(i); // "0", "1", "2",
+// }
+
+// for (let i of list) {
+//    console.log(i); // 4, 5, 6
+// }
+
+// var searchText = "T1";
+// var data = [
+//   { name: "student1", age: 20 },
+//   { name: "student2", age: 33 },
+//   { name: "student3", age: 30 },
+// ];
+// var filteredData = data.filter((data) =>
+//   data.name.includes(searchText.toLowerCase())
+// );
+// console.log(filteredData);
