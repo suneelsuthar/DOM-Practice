@@ -19,16 +19,15 @@ function signup() {
   } else if (!date) {
     alert("kindly Enter Your date");
   } else {
+    var db = firebase.firestore();
     // console.log(email, password, username, phone, date);
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(async (userCredential) => {
         console.log(userCredential);
-        await firebase
-          .database()
-          .ref("students")
-          .child(userCredential.user.uid)
+        db.collection("students")
+          .doc(userCredential.user.uid)
           .set({
             email: email,
             password: password,
@@ -38,13 +37,33 @@ function signup() {
             uid: userCredential.user.uid,
           })
           .then((res) => {
-            console.log("added in database");
+            console.log("data added");
+            window.location.href = "./home.html";
           })
           .catch((err) => {
-            console.log("not added in database", err);
+            console.log(err);
           });
+
+        // await firebase
+        //   .database()
+        //   .ref("students")
+        //   .child(userCredential.user.uid)
+        //   .set({
+        // email: email,
+        // password: password,
+        // username: username,
+        // phone: phone,
+        // date: date,
+        // uid: userCredential.user.uid,
+        //   })
+        //   .then((res) => {
+        //     console.log("added in database");
+        //   })
+        //   .catch((err) => {
+        //     console.log("not added in database", err);
+        //   });
         // Signed in
-        window.location.href = "./home.html";
+        // window.location.href = "./home.html";
         // console.log(user);
         // ...
       })

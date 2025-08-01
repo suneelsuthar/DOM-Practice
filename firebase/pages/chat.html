@@ -29,6 +29,7 @@
             border-radius: 10px;
             padding: 10px;
             flex-direction: column;
+            overflow-y: scroll;
         }
 
         .footer {
@@ -150,6 +151,43 @@
             color: black;
 
         }
+
+        .bubble-footer {
+            margin-top: 10px;
+
+        }
+
+        .bubble-footer button {
+            margin: 2px;
+            border-radius: 10px;
+            padding: 2px;
+            font-size: 10px;
+
+        }
+
+        .edit-btn {
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border-radius: 100px;
+            font-size: 20px;
+            padding: 10px !important;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border-radius: 100px;
+            font-size: 20px;
+            padding: 10px !important;
+            
+        }
     </style>
 </head>
 
@@ -177,13 +215,10 @@
         </div>
 
         <div class="footer">
-
             <input placeholder="Enter message here ..." type="text" class="input" id="input">
-
             <button class="sendbtn" onclick="sendMessage()">
                 send
             </button>
-
         </div>
 
 
@@ -199,6 +234,7 @@
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
 <script defer src="../firebase-init.js"></script>
 
